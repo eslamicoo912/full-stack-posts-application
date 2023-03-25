@@ -5,6 +5,7 @@ import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import userRoutes from "./routes/user.js";
 import postRoutes from "./routes/post.js";
+import likeRoutes from "./routes/like.js";
 
 dotenv.config();
 
@@ -23,6 +24,7 @@ app.get("/", (req, res) => {
 });
 app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
+app.use("/likes", likeRoutes);
 
 // database connection
 mongoose
