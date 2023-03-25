@@ -3,6 +3,7 @@ import express from "express";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
+import userRoutes from "./routes/user.js";
 
 dotenv.config();
 
@@ -19,6 +20,8 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.get("/", (req, res) => {
   res.send("Hello, posts!");
 });
+
+app.use("/users", userRoutes);
 
 // database connection
 mongoose
