@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import userRoutes from "./routes/user.js";
 import postRoutes from "./routes/post.js";
 import likeRoutes from "./routes/like.js";
+import commentRoutes from "./routes/comment.js";
 
 dotenv.config();
 
@@ -25,6 +26,7 @@ app.get("/", (req, res) => {
 app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
 app.use("/likes", likeRoutes);
+app.use("/comments", commentRoutes);
 
 // database connection
 mongoose
