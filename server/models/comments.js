@@ -9,6 +9,10 @@ const Comment = mongoose.Schema({
     type: String,
     required: true,
   },
+  text: {
+    type: String,
+    required: true,
+  },
 });
 
 const CommentModel = mongoose.model("CommentModel", Comment);
