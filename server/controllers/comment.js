@@ -30,13 +30,12 @@ export const getcomment = async (req, res) => {
 
 export const getPostComments = async (req, res) => {
   const { post_id } = req.params;
-  let count = 0;
   try {
     const comments = await CommentModel.find();
-    comments.filter((c) => {
-      if (c.post_id === post_id) count++;
+    const post_comments = comments.filter((c) => {
+      return c.post_id === post_id;
     });
-    res.json({ num: count });
+    res.json(post_comments);
   } catch (error) {
     console.log(error);
   }
