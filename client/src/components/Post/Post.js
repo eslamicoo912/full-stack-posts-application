@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { AiFillLike, AiOutlineComment } from "react-icons/ai";
+import "./Post.css";
 
 export default function Post({ postData }) {
   const { user_id, text, date, likes_num, comments_num, top_rated } = postData;
@@ -28,7 +29,7 @@ export default function Post({ postData }) {
           <p>{date}</p>
         </div>
       </div>
-      <div className="postInfo">{text}</div>
+      <div className="postText">{text}</div>
       <div className="footer">
         <div className="likes">
           <AiFillLike className="icon" />

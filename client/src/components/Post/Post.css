@@ -1,0 +1,67 @@
+.post * {
+  color: white;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 60%;
+  margin: auto;
+  background-color: #242526;
+  margin-top: 30px;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.post .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.post .header .userInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.post .header .userInfo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.post .postText {
+  padding: 20px 0;
+  opacity: 0.9;
+  line-height: 1.7;
+}
+
+.post .date {
+  opacity: 0.8;
+}
+
+.post .footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.post .footer .likes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.post .footer .comments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
