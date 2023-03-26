@@ -19,10 +19,15 @@ export const getAllLikes = async (req, res) => {
   }
 };
 
-export const getLike = async (req, res) => {
-  const { id } = req.params;
+export const getPostLike = async (req, res) => {
+  const { post_id } = req.params;
+  let count = 0;
   try {
-    const like = await LikeModel.findById(id);
+    const likes = await LikeModel.find();
+    likes.map((l) => {
+      if(l.post_id===post_id) count++;
+    })
+    res.json({num: count})
   } catch (error) {
     console.log(error);
   }

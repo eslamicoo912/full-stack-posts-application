@@ -5,7 +5,7 @@ const routes = Router();
 
 routes.post("/", controllers.createLike);
 routes.get("/", controllers.getAllLikes);
-routes.get("/:id", controllers.getLike);
+routes.get("/:post_id", controllers.getPostLike);
 routes.delete("/:id", controllers.deleteLike);
 
 export default routes;
