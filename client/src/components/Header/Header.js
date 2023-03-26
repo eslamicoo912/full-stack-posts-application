@@ -7,10 +7,12 @@ export default function Header() {
   return (
     <header className="header">
       <nav>
+        {/*
         <div className="brand">
           <h3>Posts</h3>
           <BsFillPencilFill className="icon" />
         </div>
+        */}
         <ul>
           <li>
             <Link to="/">Home</Link>
