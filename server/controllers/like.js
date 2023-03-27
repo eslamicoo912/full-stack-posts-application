@@ -25,18 +25,19 @@ export const getPostLike = async (req, res) => {
   try {
     const likes = await LikeModel.find();
     likes.map((l) => {
-      if(l.post_id===post_id) count++;
-    })
-    res.json({num: count})
+      if (l.post_id === post_id) count++;
+    });
+    res.json({ num: count });
   } catch (error) {
     console.log(error);
   }
 };
 
 export const deleteLike = async (req, res) => {
-  const { id } = req.params;
+  const { post_id, user_id } = req.params;
   try {
-    await LikeModel.findByIdAndDelete(id);
+    await LikeModel.findOneAndDelete({ post_id: post_id, user_id: user_id });
+    res.json({ message: `${id} is deleted` });
   } catch (error) {
     console.log(error);
   }

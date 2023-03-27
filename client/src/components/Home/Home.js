@@ -28,8 +28,8 @@ export default function Home() {
   return (
     <div className="home">
       <div className="container">
-        {posts.map((p) => {
-          return <Post postData={p} />;
+        {posts.map((p, index) => {
+          return <Post key={index} postData={p} />;
         })}
       </div>
     </div>

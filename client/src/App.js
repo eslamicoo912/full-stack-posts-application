@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 
 export default function App() {
+  sessionStorage.setItem("user_id", "641edf8a2ffa57f5441fb4b9");
   return (
     <div className="app">
       <div className="container">
